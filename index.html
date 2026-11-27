@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DARK TOOLS – Android Utility Suite by DARK WORLD</title>
+    <meta
+      name="description"
+      content="Download DARK TOOLS for Android by DARK WORLD. A powerful collection of Android tools available as a direct DARK_TOOLS.apk release."
+    />
+    <meta name="theme-color" content="#01875F" />
+    <link rel="icon" type="image/png" href="https://i.ibb.co.com/pB0HzJ27/boom.png" />
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DARK TOOLS" />
+    <meta property="og:title" content="DARK TOOLS – Android Utility Suite by DARK WORLD" />
+    <meta
+      property="og:description"
+      content="Download DARK TOOLS for Android by DARK WORLD. A powerful collection of Android tools available as a direct DARK_TOOLS.apk release."
+    />
+    <meta property="og:image" content="https://i.ibb.co.com/pB0HzJ27/boom.png" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DARK TOOLS – Android Utility Suite by DARK WORLD" />
+    <meta
+      name="twitter:description"
+      content="Download DARK TOOLS for Android by DARK WORLD. A powerful collection of Android tools available as a direct DARK_TOOLS.apk release."
+    />
+    <meta name="twitter:image" content="https://i.ibb.co.com/pB0HzJ27/boom.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "DARK TOOLS",
+        "operatingSystem": "Android",
+        "applicationCategory": "UtilitiesApplication",
+        "description": "A powerful collection of Android tools.",
+        "softwareVersion": "V1",
+        "author": {
+          "@type": "Organization",
+          "name": "DARK WORLD"
+        },
+        "downloadUrl": "https://github.com/rahadhasan666/darktools/releases/download/V1/DARK_TOOLS.apk",
+        "image": "https://i.ibb.co.com/pB0HzJ27/boom.png",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+
+    <!-- Prevent theme flash -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('dark-tools-theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (saved === 'dark' || (!saved && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-white text-[#202124] antialiased selection:bg-[#01875F]/20 selection:text-[#01875F] dark:bg-[#131314] dark:text-[#E8EAED] dark:selection:bg-[#00A173]/25 dark:selection:text-[#6DD58C] transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
