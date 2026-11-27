@@ -1,6 +1,0 @@
-{
-  "name": "DARK TOOLS",
-  "description": "A powerful collection of Android tools by DARK WORLD. Download the official DARK_TOOLS.apk.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
