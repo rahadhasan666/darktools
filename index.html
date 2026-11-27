@@ -1,1 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fa">
+  <meta name="description" content="Download DARK TOOLS for Android — a powerful collection of Android tools from DARK WORLD.">
+  <meta property="og:title" content="DARK TOOLS — Android App">
+  <meta property="og:description" content="A powerful collection of Android tools. Download the official DARK TOOLS APK.">
+  <meta property="og:image" content="https://i.ibb.co.com/pB0HzJ27/boom.png">
+  <title>DARK TOOLS — Android App | DARK WORLD</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg:#f7f8fa; --surface:#fff; --surface-2:#f1f3f4; --text:#202124;
+      --muted:#5f6368; --line:#e7e9ec; --green:#0b8043; --green-hover:#086b38;
+      --green-soft:#e6f4ea; --shadow:0 8px 28px rgba(32,33,36,.06);
+      --header:rgba(255,255,255,.88);
+    }
+    [data-theme="dark"] {
+      color-scheme:dark; --bg:#111315; --surface:#1b1e21; --surface-2:#25292d;
+      --text:#e8eaed; --muted:#aeb4bb; --line:#30353a; --green:#81c995;
+      --green-hover:#9bd9aa; --green-soft:#1d3828; --shadow:0 10px 32px rgba(0,0,0,.22);
+      --header:rgba(27,30,33,.88);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:92px}
+    body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;transition:background .25s,color .25s}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .topbar{height:72px;position:sticky;top:0;z-index:20;background:var(--header);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    .nav{height:100%;max-width:1120px;margin:auto;padding:0 28px;display:flex;align-items:center;gap:34px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:750;letter-spacing:.11em;font-size:15px;white-space:nowrap}
+    .brand-mark{width:31px;height:31px;border-radius:10px;background:linear-gradient(145deg,#142c20,#0b8043);display:grid;place-items:center;color:#fff;font-size:14px;box-shadow:0 4px 12px #0b804333}
+    .nav-links{display:flex;align-items:center;gap:28px;margin-left:14px;color:var(--muted);font-size:14px}
+    .nav-links a{transition:color .2s}.nav-links a:hover{color:var(--text)}
+    .nav-actions{margin-left:auto;display:flex;align-items:center;gap:9px}
+    .icon-btn{height:42px;width:42px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;background:var(--surface);color:var(--text);cursor:pointer;transition:.2s}
+    .icon-btn:hover{background:var(--surface-2);transform:translateY(-1px)}
+    .icon-btn svg{width:18px;height:18px}
+    .menu-btn{display:none}
+    main{max-width:1000px;margin:0 auto;padding:54px 28px 80px;animation:appear .65s ease both}
+    .crumb{font-size:13px;color:var(--muted);margin:0 0 27px}
+    .crumb span{margin:0 9px;color:#9aa0a6}
+    .app-hero{display:grid;grid-template-columns:172px 1fr;gap:32px;align-items:center;padding:12px 0 34px}
+    .app-icon-wrap{width:160px;height:160px;border-radius:34px;background:var(--surface);box-shadow:0 12px 32px rgba(0,0,0,.12);overflow:hidden;animation:float 5s ease-in-out infinite}
+    .app-icon{width:100%;height:100%;object-fit:cover;display:block}
+    .app-title{font-size:clamp(34px,5vw,48px);line-height:1.12;letter-spacing:-.045em;margin:0 0 8px;font-weight:650}
+    .developer{color:var(--green);font-weight:600;font-size:15px}
+    .category-line{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px;color:var(--muted);font-size:13px}
+    .dot{width:3px;height:3px;border-radius:50%;background:var(--muted)}
+    .install-row{display:flex;align-items:center;gap:16px;margin-top:25px;flex-wrap:wrap}
+    .install{height:50px;min-width:180px;padding:0 28px;border:0;border-radius:999px;background:#0b8043;color:#fff;font-weight:700;letter-spacing:.01em;display:inline-flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 7px 18px #0b80432b;transition:transform .2s,background .2s,box-shadow .2s}
+    .install:hover{background:#086b38;transform:translateY(-2px);box-shadow:0 10px 22px #0b804344}
+    .install:active{transform:scale(.97)}
+    .install svg{width:18px;height:18px}
+    .safe-note{color:var(--muted);font-size:12px;display:flex;align-items:center;gap:7px}
+    .safe-note svg{width:15px;height:15px}
+    .divider{height:1px;background:var(--line);margin:30px 0}
+    .section{margin-top:34px}
+    .section-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+    h2{font-size:21px;letter-spacing:-.02em;font-weight:620;margin:0}
+    .section-kicker{font-size:12px;color:var(--muted)}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:18px;background:var(--surface);overflow:hidden}
+    .stat{padding:20px 22px;min-height:94px;display:flex;flex-direction:column;justify-content:center;gap:5px}
+    .stat+.stat{border-left:1px solid var(--line)}
+    .stat strong{font-size:16px;font-weight:650}
+    .stat span{font-size:12px;color:var(--muted)}
+    .about-card,.info-card,.instructions{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow)}
+    .about-card p{margin:0;color:var(--muted);max-width:760px;line-height:1.8}
+    .info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 28px}
+    .info-item{display:flex;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid var(--line);font-size:14px}
+    .info-item:last-child,.info-item:nth-last-child(2){border-bottom:0}
+    .info-item span:first-child{color:var(--muted)}
+    .info-item strong{text-align:right;font-weight:550}
+    .instructions{display:flex;gap:16px;align-items:flex-start}
+    .step-icon{width:38px;height:38px;flex:0 0 38px;border-radius:12px;background:var(--green-soft);color:var(--green);display:grid;place-items:center}
+    .step-icon svg{width:19px;height:19px}
+    .instructions h3{margin:0 0 5px;font-size:15px;font-weight:650}
+    .instructions p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
+    footer{border-top:1px solid var(--line);padding:28px;text-align:center;color:var(--muted);font-size:12px}
+    footer strong{color:var(--text);letter-spacing:.12em}
+    .mobile-menu{display:none}
+    .mobile-menu.open{display:flex;position:absolute;top:71px;left:0;right:0;padding:18px 28px 22px;background:var(--surface);border-bottom:1px solid var(--line);flex-direction:column;gap:15px;box-shadow:var(--shadow)}
+    .mobile-menu a{color:var(--muted);font-size:14px}
+    @keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+    @media(max-width:650px){
+      .topbar{height:64px}.nav{padding:0 18px;gap:12px}.nav-links{display:none}.menu-btn{display:grid}
+      .brand{font-size:13px}.nav-actions{gap:7px}.icon-btn{width:39px;height:39px}
+      main{padding:30px 19px 60px}.crumb{margin-bottom:22px}
+      .app-hero{grid-template-columns:92px 1fr;gap:18px;align-items:start;padding-bottom:26px}
+      .app-icon-wrap{width:90px;height:90px;border-radius:23px}
+      .app-title{font-size:30px;margin-top:1px}.developer{font-size:14px}
+      .category-line{margin-top:9px;font-size:12px;gap:7px}
+      .install-row{grid-column:1/-1;margin-top:23px;gap:11px}
+      .install{width:100%;height:49px}
+      .safe-note{width:100%;justify-content:center}
+      .stats{grid-template-columns:1fr}.stat{min-height:74px;padding:15px 19px}
+      .stat+.stat{border-left:0;border-top:1px solid var(--line)}
+      .info-grid{grid-template-columns:1fr}.info-item:nth-last-child(2){border-bottom:1px solid var(--line)}
+      .about-card,.info-card,.instructions{padding:19px}
+      .section{margin-top:29px}h2{font-size:19px}
+    }
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#" aria-label="DARK TOOLS home"><span class="brand-mark">D</span><span>DARK TOOLS</span></a>
+      <div class="nav-links"><a href="#overview">Overview</a><a href="#about">About</a><a href="#app-info">App info</a></div>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Switch to dark mode" title="Toggle theme">
+          <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.7 8.7 0 1 0 20.2 15.1Z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu"><a href="#overview">Overview</a><a href="#about">About this app</a><a href="#app-info">App info</a></div>
+  </header>
+
+  <main>
+    <p class="crumb">Apps <span>›</span> Tools <span>›</span> DARK TOOLS</p>
+    <section class="app-hero" aria-labelledby="appName">
+      <div class="app-icon-wrap"><img class="app-icon" src="https://i.ibb.co.com/pB0HzJ27/boom.png" alt="DARK TOOLS app icon"></div>
+      <div>
+        <h1 class="app-title" id="appName">DARK TOOLS</h1>
+        <a class="developer" href="#footer">DARK WORLD</a>
+        <div class="category-line"><span>Tools</span><i class="dot"></i><span>Android app</span><i class="dot"></i><span>APK download</span></div>
+        <div class="install-row">
+          <a class="install" id="installButton"
+             href="https://github.com/rahadhasan666/darktools/releases/download/V1/DARK_TOOLS.apk"
+             download="DARK_TOOLS.apk" aria-label="Install DARK TOOLS by downloading the APK">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v3h16v-3"/></svg>
+            INSTALL
+          </a>
+          <span class="safe-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></svg>
+            Direct APK download from GitHub
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section" id="overview">
+      <div class="section-head"><h2>App overview</h2><span class="section-kicker">APPLICATION DETAILS</span></div>
+      <div class="stats">
+        <div class="stat"><strong>Tools</strong><span>Category</span></div>
+        <div class="stat"><strong>Android</strong><span>Platform</span></div>
+        <div class="stat"><strong>DARK WORLD</strong><span>Developer</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-head"><h2>About this app</h2></div>
+      <div class="about-card">
+        <p>DARK TOOLS is a powerful collection of Android tools, brought to you by DARK WORLD. Download the APK directly and install it on your compatible Android device.</p>
+      </div>
+    </section>
+
+    <section class="section" id="app-info">
+      <div class="section-head"><h2>App information</h2></div>
+      <div class="info-card">
+        <div class="info-grid">
+          <div class="info-item"><span>App name</span><strong>DARK TOOLS</strong></div>
+          <div class="info-item"><span>Developer</span><strong>DARK WORLD</strong></div>
+          <div class="info-item"><span>Category</span><strong>Tools</strong></div>
+          <div class="info-item"><span>Platform</span><strong>Android</strong></div>
+          <div class="info-item"><span>Package format</span><strong>APK</strong></div>
+          <div class="info-item"><span>File name</span><strong>DARK_TOOLS.apk</strong></div>
+          <div class="info-item"><span>Distribution</span><strong>GitHub Releases</strong></div>
+          <div class="info-item"><span>Compatibility</span><strong>Android devices</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>How to install</h2></div>
+      <div class="instructions">
+        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v3h16v-3"/></svg></div>
+        <div><h3>Download and install the APK</h3><p>Tap INSTALL to open the direct GitHub APK download. Once the file has downloaded, open DARK_TOOLS.apk and follow Android's installation prompts. If Android asks, allow installation from your browser or file manager. Only install APK files from sources you trust.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer"><strong>DARK WORLD</strong><br><span>Tools for a smarter Android experience.</span></footer>
+
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const themeButton = document.getElementById('themeToggle');
+      const themeIcon = document.getElementById('themeIcon');
+      const menuButton = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      const moon = '<path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.7 8.7 0 1 0 20.2 15.1Z"/>';
+      const sun = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/>';
+
+      function setTheme(theme) {
+        root.dataset.theme = theme;
+        const dark = theme === 'dark';
+        themeIcon.innerHTML = dark ? sun : moon;
+        themeButton.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+        document.querySelector('meta[name="theme-color"]').content = dark ? '#111315' : '#f7f8fa';
+      }
+
+      const savedTheme = (() => {
+        try { return localStorage.getItem('dark-tools-theme'); } catch (_) { return null; }
+      })();
+      setTheme(savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+
+      themeButton.addEventListener('click', () => {
+        const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+        setTheme(next);
+        try { localStorage.setItem('dark-tools-theme', next); } catch (_) {}
+      });
+
+      menuButton.addEventListener('click', () => {
+        const open = mobileMenu.classList.toggle('open');
+        menuButton.setAttribute('aria-expanded', String(open));
+        menuButton.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+          menuButton.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
 
